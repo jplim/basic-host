@@ -1,0 +1,19 @@
+:root {
+    --_nsc_container_width: 100%;
+    --_nsc_container_height: 100%;
+    --_nsc_container_position: relative;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    height: 80%;
+    margin: 50px;
+}

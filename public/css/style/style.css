@@ -1,0 +1,7 @@
+@import url("luigi.css");
+
+:root {
+    --sapNscContainerWidth: 100%;
+    --sapNscContainerHeight: 100%;
+    --sapNscContainerPosition: relative;
+}

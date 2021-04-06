@@ -1,0 +1,226 @@
+{
+    "_version": "1.0.0",
+    "ClientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+    "renderers": [
+        {
+            "ID": "cb6088a9-df2a-40e0-99c5-d4818b58be7c",
+            "name": "Visual Business",
+            "description": "SAP Visual Business Renderer (old)",
+            "config": {
+                "license": null,
+                "licenseToken": null,
+                "cloudFoundryDestination": null,
+                "url": "https://renderer1.com",
+                "defaultCenterLatitude": null,
+                "defaultCenterLongitude": null,
+                "defaultZoomLevel": null,
+                "jsonString": "jsonString1"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "770c602d-7630-4b06-969f-e94f835cd46a",
+            "name": "Mapbox",
+            "description": "SAP Mapbox Renderer with Martin's token",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+                "license": null,
+                "licenseToken": "pk.eyJ1IjoibWFydGluc3RlbnppZyIsImEiOiJjazV1amZpdGwwZG92M2xucDhvbWoxMTB2In0.JWYYOv7JzUpGA51DQLQK-A",
+                "cloudFoundryDestination": null,
+                "url": "https://renderer2.com",
+                "defaultCenterLatitude": null,
+                "defaultCenterLongitude": null,
+                "defaultZoomLevel": null,
+                "jsonString": "jsonString2"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "150e8ca2-43e2-4674-8b20-0f7f94353e47",
+            "name": "Rizing Stingray",
+            "description": " Rizing renderer (custom)",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+                "license": "XAFAFSRE",
+                "licenseToken": "testtoken",
+                "cloudFoundryDestination": "RizingDest",
+                "url": null,
+                "defaultCenterLatitude": null,
+                "defaultCenterLongitude": null,
+                "defaultZoomLevel": null,
+                "jsonString": "jsonString3"
+            },
+            "config_ext": {
+                "test": "value1"
+            }
+        }
+    ],
+    "layers": [
+        {
+            "ID": "395b0f14-c776-4bec-bbbb-140fa0c7a0fd",
+            "name": "Roads",
+            "description": "Roads loaded from the BO Service",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+                "serviceType": "ODataV4",
+                "serviceUrl": "https://rizinginnovation-playground-sap-netw-gis-srv.cfapps.us10.hana.ondemand.com/netgeobrowse/BusinessGeometries",
+                "odataFieldNameGeometry": "boGeometry",
+                "odataFieldNameProperties": "metaData",
+                "layerType": "line",
+                "minZoom": null,
+                "layoutJson": "{'line-join': 'round','line-cap': 'round'}",
+                "paintJson": "{'line-color': '#888','line-width': 8}",
+                "markerUrl": null,
+                "markerFallback": null
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "d4a1e6ee-b80e-40b2-acd6-48d4d3a42659",
+            "name": "Current Truck Location",
+            "description": "This shows the ever changing truck location around the globe https://docs.mapbox.com/mapbox-gl-js/example/live-geojson/",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+                "serviceType": "geoJson",
+                "serviceUrl": "https://wanderdrone.appspot.com/",
+                "odataFieldNameGeometry": null,
+                "odataFieldNameProperties": null,
+                "layerType": "symbol",
+                "minZoom": null,
+                "layoutJson": "{'icon-image':'rocket-15'}",
+                "paintJson": null,
+                "markerUrl": null,
+                "markerFallback": null
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "05425bcd-146d-4c4d-850f-01b1898732b3",
+            "name": "Customer Poles",
+            "description": "This shows pole locations from an ESRI Rest endpoint",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0",
+                "serviceType": "geoJson",
+                "serviceUrl": "https://portal.rizing.com/server/rest/services/Testing/TEST_ELECTRIC/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&historicMoment=&returnDistinctValues=false&resultOffset=&resultRecordCount=&returnExtentOnly=false&datumTransformation=¶meterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=geojson",
+                "odataFieldNameGeometry": null,
+                "odataFieldNameProperties": null,
+                "layerType": "circle",
+                "minZoom": null,
+                "layoutJson": null,
+                "paintJson": "{'paint': {'circle-color': '#FF0000'}}",
+                "markerUrl": null,
+                "markerFallback": null
+            },
+            "config_ext": {}
+        }
+    ],
+    "actions": [
+        {
+            "ID": "bcb96a46-2b79-464b-9745-6faac61499b5",
+            "name": "Create Work Order",
+            "description": "Creates a collaborative work order",
+            "config": {
+				"actionType": "url",
+				"url": "https://bla.com",
+				"semanticObject": "",
+				"action": "",
+				"parameters": {
+					"key": "{{workorder}}"
+				}
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "6729e03f-a867-49a1-910a-f95ae6c2e70d",
+            "name": "Create Notification",
+            "description": "Creates a notification in the work management system",
+            "config": {
+                "actionType": "url",
+				"url": "https://bla.com",
+				"semanticObject": "",
+				"action": "",
+				"parameters": {
+					"key": "{{workorder}}"
+				}
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "662abfc6-d480-4b5b-9b9c-65d8e455b795",
+            "name": "Track Shipment",
+            "description": "Tracks a shipment in LBN",
+            "config": {
+                "actionType": "url",
+				"url": "https://bla.com",
+				"semanticObject": "",
+				"action": "",
+				"parameters": {
+					"key": "{{workorder}}"
+				}
+            },
+            "config_ext": {}
+        }
+    ],
+    "scenarios": [
+        {
+            "name": "Work Orders (Default)",
+            "layers": [
+                {
+                    "odata-service": "/nscprovider",
+                    "authentication": {},
+                    "availableActions": [
+                        "Test1",
+                        "TestJS1"
+                    ]
+                }
+            ]
+        }
+    ],
+    "boTypes": [
+        {
+            "ID": "dc34c712-a906-4347-b23b-a88fea1fab8a",
+            "name": "Shipment",
+            "description": "LBN Shipment",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "eaf815c8-eddf-421b-9e99-9b289629ec6f",
+            "name": "Work Order",
+            "description": "AIN Work Order",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "cfa87170-0932-4e49-a355-e42a6339d8ce",
+            "name": "Notification",
+            "description": "S4 Notification",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "6385a775-e8ef-4289-8464-877f593c79f0",
+            "name": "Equipment",
+            "description": "AIN Equipment",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0"
+            },
+            "config_ext": {}
+        },
+        {
+            "ID": "478e6ced-5756-44de-ad33-e3edf1db22e4",
+            "name": "Truck Location",
+            "description": "Truck Location",
+            "config": {
+                "clientId": "76785e66-3032-4a27-b53f-4373dd135ce0"
+            },
+            "config_ext": {}
+        }
+    ]
+}

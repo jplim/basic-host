@@ -1,0 +1,7 @@
+@import "luigi.css";
+
+* {
+    --_nsc_container_width: 100%;
+    --_nsc_container_height: 100%;
+    --_nsc_container_position: unset;
+}
